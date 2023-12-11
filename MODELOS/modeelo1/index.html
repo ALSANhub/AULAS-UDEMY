@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Modelo Forms UDEMY</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <h1 id="title"> UDEMY Survey Forms</h1>
+        <p id="description"> Thank you for taking the time to help us improve the platform </p>
+        <form id="survey-form">
+            <label id="name-label"> <input id="name" type="text" required placeholder="name" /> </label>
+            <label id="email-label"> <input id="email" type="email" required placeholder="email" /> </label>
+            <label id="number-label"> <input id="number" type="number" min="0" max="999"
+                    onkeypress="return onlynumber();" placeholder="number" /> </label>
+            <input type="radio" name="group" value="1" />
+            <input type="radio" name="group" value="2" />
+            <input id="checkbox" type="checkbox" value="z" />
+            <input id="terms-and-conditions" type="checkbox" value="a" />
+            <input id="terms-and-conditions" type="checkbox" value="b" />
+            <input id="terms-and-conditions" type="checkbox" value="c" />
+            <input id="terms-and-conditions" type="checkbox" value="d" />
+            <input id="terms-and-conditions" type="checkbox" value="e" />
+            <input id="terms-and-conditions" type="checkbox" value="f" />
+            <select id="dropdown" dropdown>
+                <option value="">(select one)</option>
+                <option value="1">freeCodeCamp </option>
+                <textarea> </textarea>
+                <button id="submit" type="submit" value="submit">
+                    ENVIAR
+                </button>
+        </form>
+    </section>
+
+    <script src="./assets/js/main.js">
+
+    </script>
+</body>
+
+</html>
