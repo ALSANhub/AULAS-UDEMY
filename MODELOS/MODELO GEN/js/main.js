@@ -1,15 +1,33 @@
-const nome = ['JHONI', 'FELIPE', 'AMEIDA', 'SANTOS'];
+const novaTarefa = document.querySelector('.nova-tarefa');
+const addTarefa = document.querySelector('.add-tarefa');
+const tarefas = document.querySelector('.tarefas');
 
-//for (let i in nome) {
-//    console.log(nome[i]);
-//}
-
-for (let valor of nome){
-    console.log(valor);
+function criaLi(){
+    const li = document.createElement('li');
+    return li;
 }
 
-console.log('valor');
+function limpaImput() {
+    novaTarefa.value = '';
+    novaTarefa.focus();    
+}
 
-nome.forEach(function(valor, indice, array){
-    console.log(valor, indice, array);
+novaTarefa.addEventListener('keypress', function(e){
+    if (e.keyCode === 13) {
+        if (!novaTarefa.value) return;
+    criaTarefa(novaTarefa.value);
+    }
+});
+
+function criaTarefa(textoImput) {
+    const li = criaLi();
+    li.innerText = textoImput;
+    tarefas.appendChild(li)
+    limpaImput();
+}
+
+addTarefa.addEventListener('click', function(){
+    if (!novaTarefa.value) return;
+    criaTarefa(novaTarefa.value);
+    
 });

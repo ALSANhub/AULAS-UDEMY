@@ -74,3 +74,10 @@ form buttom:hover {
     background: #bb0808;
 }
 
+.relogio {
+    font-size: 3em;
+}
+
+.pausado{
+    color: rgba(255, 0, 0, 0.68)
+}
